@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void)
+{
+    // oefening 1
+    int[a] = 5;
+
+    for(i = 0, i<5, i++)
+    {
+        a[i] = 0;
+    }
+
+    printf("%s%13s\n", "Index", "Waarde");
+
+   // zet inhoud van array in tabelformaat
+   for (size_t i = 0; i < 5; ++i) {                   
+      printf("%7u%13d\n", i, a[i]);     
+
+    //oefening 2
+
+    int[a] = {12, 420, 69, 21, }      
+
+    for (size_t i = 0; i < 5; ++i) 
+    {
+      printf("%7u%13d\n", i, a[i]);
+    } 
+
+    // oefening 3
+
+    int total = 0;
+
+    for (size_t i = 0; i < 5; ++i) 
+    {
+        total += a[i];
+    }
+    
+    // oefening 4
+    void selectNumber()
+    {
+        
+    }
+
+
+}

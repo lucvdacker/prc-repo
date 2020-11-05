@@ -13,6 +13,17 @@
 #define ADDRESS_TIME_LOW (0x22)
 #define ADDRESS_DATE_HIGH (0x23)
 #define ADDRESS_DATE_LOW (0x24)
+#define PAUSEMASK (0b1000)
+#define FORMATMASK  (0b1)
+#define INTERVALMASK  (0b110)
+#define HOURSMASK (0b11110000)
+#define MINUTEHIGHMASK (0b1111)
+#define MINUTELOWMASK (0b11000000)
+#define SECONDSMASK (0b11111)
+#define YEARMASK  (0b1111111)
+#define MONTHHIGHMASK (0b111)
+#define MONTHLOWMASK  (0b10000000)
+#define DAYOFMONTH  (0b11111000)
 
 typedef enum {
     TIME_HOUR_MINUTE = 0,
@@ -66,7 +77,7 @@ void watch_registers_set_config_time_update_interval(
  * @param interval: The address to which the time update interval will be
  * written.
  *
- * @pre is_paused, format and interval may not be NULL.
+ * @pre is_paused, format and interval may not be NULL.l
  */
 void watch_registers_get_config_settings(
             uint8_t config, bool* is_paused, time_format* format,

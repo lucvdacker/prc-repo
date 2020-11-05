@@ -13,7 +13,7 @@
 int addAnimal(
             const Animal* animalPtr, Animal* animalArray,
             size_t animalArrayLength, size_t numberOfAnimalsPresent,
-            size_t* newNumberOfAnimalsPresent)
+            size_t* newNumberOfAnimalsPresent, int animalId)
 {
     for (int i = 0; i < numberOfAnimalsPresent; i++)
     {
@@ -78,7 +78,7 @@ int findAnimalById(
 int sortAnimalsByAge(Animal* animalArray, size_t numberOfAnimalsPresent)
 {
     int *age;
-   for (age = 1; lus < animalArray; ++age) {                   
+   for (age = 1; age < animalArray; ++age) {                   
 
       for (size_t i = 0; i < animalArray - 1; ++i) {                     
 
@@ -97,7 +97,7 @@ int sortAnimalsByYearFound(
             Animal* animalArray, size_t numberOfAnimalsPresent)
 {
     int *yearFound;
-   for (yearFound = 1; lus < animalArray; ++yearFound) 
+   for (yearFound = 1; yearFound < animalArray; ++yearFound) 
    {                
       for (size_t i = 0; i < animalArray - 1; ++i) 
       {                     

@@ -8,8 +8,6 @@
 #include "watch_i2c.h"
 #include "watch_registers.h"
 
-#define ADDRESS_CONFIG (0x20)
-#define ADDRESS_TIME_HIGH (0x21)
 #define ADDRESS_TIME_LOW (0x22)
 #define ADDRESS_DATE_HIGH (0x23)
 #define ADDRESS_DATE_LOW (0x24)

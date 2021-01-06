@@ -8,8 +8,6 @@
 #include "watch_i2c.h"
 #include "watch_registers.h"
 
-#define ADDRESS_CONFIG (0x20)
-#define ADDRESS_TIME_HIGH (0x21)
 #define ADDRESS_TIME_LOW (0x22)
 #define ADDRESS_DATE_HIGH (0x23)
 #define ADDRESS_DATE_LOW (0x24)
@@ -77,7 +75,7 @@ void watch_registers_set_config_time_update_interval(
  * @param interval: The address to which the time update interval will be
  * written.
  *
- * @pre is_paused, format and interval may not be NULL.l
+ * @pre is_paused, format and interval may not be NULL.
  */
 void watch_registers_get_config_settings(
             uint8_t config, bool* is_paused, time_format* format,

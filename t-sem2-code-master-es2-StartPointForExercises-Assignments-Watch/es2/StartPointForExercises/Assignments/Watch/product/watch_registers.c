@@ -1,5 +1,7 @@
 #include "watch_registers.h"
 
+//config = ADDRESS_CONFIG;
+
 void watch_registers_toggle_config_is_paused(uint8_t* config)
 {
     if(config != NULL)  

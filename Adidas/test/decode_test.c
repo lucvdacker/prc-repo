@@ -24,7 +24,17 @@ extern void tearDown(void)
 
 void test_decode(void)
 {
-	
+		uint8_t* high =  0b1111;
+    uint8_t* low = 0b1111;
+    uint8_t combinedNibbles = 0;
+    decode_combine_nibbles(high, low, combinedNibbles);
+    TEST_ASSERT_EQUAL(255, combinedNibbles);
+    
+    
+    uint8_t in = 0b1111110;
+    uint8_t *nibble = NULL;
+    decode_byte(in, *nibble);
+    TEST_ASSERT_EQUAL(0b1111111, *nibble);
 }
 
 

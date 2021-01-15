@@ -20,7 +20,10 @@ extern void tearDown(void)
 
 static void test_channel(void)
 {
-  
+  	uint8_t value = 0b1010110;
+	TEST_ASSERT_NOT_EQUAL(0b1010110, channel_change_one_random_bit(value)); 
+	channel_change_one_random_bit(value) | 0b01111111;
+	TEST_ASSERT_TRUE(value < 0b11111111);
 }
 
 int main (int argc, char * argv[])

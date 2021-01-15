@@ -19,7 +19,10 @@ extern void tearDown(void)
 
 void test_parity(void)
 {
-
+    __uint8_t toEncode = 0b1111;
+    TEST_ASSERT_EQUAL(4, calculateParity(toEncode));
+    TEST_ASSERT_TRUE(calculateParity(toEncode) < 5);
+    TEST_ASSERT_FALSE(calculateParity(toEncode) < 0);
 }
 
 
